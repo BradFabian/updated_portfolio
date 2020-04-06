@@ -78,39 +78,37 @@ h3 {
 .section__subtitle--intro,
 .section__subtitle--about {
   background: var(--clr-accent);
-    padding: .25em 1em;
-    font-family: var(--ff-secondary);
-    margin-bottom: 1em;
+  padding: 0.25em 1em;
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
 }
 
 /* intro section */
 
 .intro {
   position: relative;
-
 }
 
 @media (min-width: 600px) {
   .intro {
-      display: grid;
-      width: min-content;
-      margin: 0 auto;
-      grid-column-gap: 1em;
-      grid-template-areas: 
-          "img title"
-          "img subtitle";
-      grid-template-columns: min-content max-content;
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
   }
-  
+
   .intro__img {
-      grid-area: img;
-      min-width: 250px;
-  }    
-  
+    grid-area: img;
+    min-width: 250px;
+  }
+
   .section__subtitle--intro {
     align-self: start;
     grid-column: -1/1;
-
   }
 
   .section__subtitle--intro {
@@ -121,5 +119,5 @@ h3 {
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
+  }
 }
-
