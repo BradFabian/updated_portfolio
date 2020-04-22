@@ -33,6 +33,9 @@
   }
 }
 /* General Styles*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -163,8 +166,20 @@ h3 {
   top: 1em;
 }
 
-.nav-open {
-  background: red;
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
 }
 
 .hamburger {
