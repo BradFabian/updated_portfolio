@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* Custom Properties, update these for your own design */
+
 :root {
   --ff-primary: "Source Sans Pro", sans-serif;
   --ff-secondary: "Source Code Pro", monospace;
@@ -11,8 +13,8 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-bg: #fff;
-  --clr-text: #303030;
+  --clr-light: #fff;
+  --clr-dark: #303030;
   --clr-accent: #16e0bd;
 
   --fs-h1: 3rem;
@@ -20,7 +22,7 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
-  --bs: 0.25em 0.25em 0.75em rbga(0, 0, 0, 0.25),
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
@@ -32,10 +34,14 @@
     --fs-body: 1.125rem;
   }
 }
-/* General Styles*/
-html {
-  scroll-behavior: smooth;
-}
+
+/* General styles */
+
+/* endable this to add smooth scrolling */
+/* html {
+    scroll-behavior: smooth;
+} */
+
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -43,6 +49,10 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
+}
+
+section {
+  padding: 5em 2em;
 }
 
 img {
@@ -79,11 +89,12 @@ strong {
   transform: scale(1.1);
 }
 
-/*  Typography */
+/* Typography */
+
 h1,
 h2,
 h3 {
-  line-height: 1.1;
+  line-height: 1;
   margin: 0;
 }
 
@@ -105,6 +116,10 @@ h3 {
   font-weight: var(--fw-reg);
 }
 
+.section__title--intro strong {
+  display: block;
+}
+
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
@@ -118,7 +133,23 @@ h3 {
   margin-bottom: 1em;
 }
 
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+}
+
 /* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.logo {
+  max-width: 100px;
+}
 
 .nav {
   position: fixed;
@@ -164,6 +195,11 @@ h3 {
   position: absolute;
   right: 1em;
   top: 1em;
+  z-index: 1000;
+}
+
+.nav-open .nav {
+  transform: translateX(0);
 }
 
 .nav-open .nav-toggle {
@@ -190,7 +226,7 @@ h3 {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--clr-dark);
+  background: var(--clr-accent);
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -212,7 +248,7 @@ h3 {
   bottom: 6px;
 }
 
-/* intro section */
+/*  Intro section  */
 
 .intro {
   position: relative;
@@ -220,6 +256,10 @@ h3 {
 
 .intro__img {
   box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+  display: inline-block;
 }
 
 @media (min-width: 600px) {
@@ -237,6 +277,8 @@ h3 {
   .intro__img {
     grid-area: img;
     min-width: 250px;
+    position: relative;
+    z-index: 2;
   }
 
   .section__subtitle--intro {
@@ -250,12 +292,13 @@ h3 {
   }
 }
 
-/* My Services */
+/*  My services section  */
 
-.my-service {
+.my-services {
   background-color: var(--clr-dark);
   background-image: url(../img/services-bg.jpg);
   background-size: cover;
+  /* background-blend-mode: multiply; */
   color: var(--clr-light);
   text-align: center;
 }
@@ -325,10 +368,10 @@ h3 {
     grid-column: 1 / -1;
     grid-row: 2;
     position: relative;
-    left: -2em;
-    width: calc(100% + 4em);
+    left: -1em;
+    width: calc(100% + 2em);
     padding-left: 1em;
-    padding-right: calc(200px + 3em);
+    padding-right: calc(200px + 4em);
   }
 
   .about-me__img {
@@ -371,7 +414,8 @@ h3 {
   opacity: 0.5;
 }
 
-/* Footer */
+/* footer */
+
 .footer {
   background: #111;
   color: var(--clr-accent);
@@ -412,4 +456,18 @@ h3 {
 
 .social-list__link {
   padding: 0.5em;
+}
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
