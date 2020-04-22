@@ -163,6 +163,10 @@ h3 {
   top: 1em;
 }
 
+.nav-open {
+  background: red;
+}
+
 .hamburger {
   display: block;
   position: relative;
