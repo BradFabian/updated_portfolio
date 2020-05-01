@@ -471,3 +471,96 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Resume Page */
+.resume {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.35);
+  grid-template-areas:
+    "name           name"
+    "work           work       about"
+    "work           work       education"
+    "community      references skills";
+  grid-gap: 5px;
+}
+
+.grid-area {
+  padding: 1em 1em 1em 1em;
+  border: 1px black solid;
+}
+
+.name {
+  grid-area: name;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.about {
+  grid-area: about;
+}
+
+.references {
+  grid-area: references;
+}
+
+.work {
+  grid-area: work;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.education {
+  grid-area: education;
+}
+
+.community {
+  grid-area: community;
+}
+
+.circle {
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+/* align cv to center of page */
+
+.wrapper {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .resume {
+    grid-template-areas:
+      "name  name"
+      "work about"
+      "work education"
+      "community skills";
+  }
+}
+
+@media (min-width: 900px) {
+  .resume {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "name  name"
+      "about about"
+      "work work"
+      "education education"
+      "skills skills"
+      "community community"
+      "references references";
+  }
+}
+
+@media print {
+  /* remove any screen only styles, for example link underline */
+}
