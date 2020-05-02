@@ -335,7 +335,8 @@ header {
 
 .my-services {
   background-color: var(--clr-dark);
-  background-image: url(../img/fireHydrant.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)),
+    url(../img/fireHydrant.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
