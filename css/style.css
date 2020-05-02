@@ -336,7 +336,7 @@ header {
 .my-services {
   background-color: var(--clr-dark);
   background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)),
-    url(../img/tropics.jpg);
+    url(../img/fireHydrant.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -429,6 +429,11 @@ header {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)),
+    url(../img/fireHydrant.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .portfolio {
