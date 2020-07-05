@@ -11,9 +11,9 @@
   --ff-secondary: "Source Code Pro", monospace;
 
   --fw-reg: 300;
-  --fw-bold: 900;
+  --fw-bold: 400;
 
-  --clr-light: #fff;
+  --clr-light: #ecf0f1;
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
 
@@ -43,8 +43,8 @@
 } */
 
 body {
-  background: var(--clr-light);
-  color: var(--clr-dark);
+  background: var(--clr-dark);
+  color: var(--clr-light);
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
@@ -75,7 +75,7 @@ strong {
   display: inline-block;
   padding: 0.5em 2.5em;
   background: var(--clr-accent);
-  color: var(--clr-dark);
+  color: var(--clr-light);
   text-decoration: none;
   cursor: pointer;
   font-size: 0.8rem;
@@ -83,6 +83,7 @@ strong {
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
+  border-radius: 1rem;
 }
 
 .btn:hover {
@@ -118,6 +119,39 @@ h3 {
 
 .section__title--intro strong {
   display: block;
+}
+
+.section__title--neontubing {
+  text-align: center;
+  color: rgba(165, 253, 238, 0.8);
+  font-family: "Concert One", "Arial Narrow", sans-serif;
+  animation: neonspark 1s 3s forwards;
+  letter-spacing: 1rem;
+}
+
+.section__title--neontubing span {
+  animation: neonspark 4s 3s infinite;
+}
+
+@keyframes neonspark {
+  0% {
+    text-shadow: none;
+  }
+  30% {
+    text-shadow: 0 0 30px rgba(22, 224, 189, 0.6);
+  }
+  60% {
+    text-shadow: 0 0 30px rgba(22, 224, 189, 0.6),
+      0 0 60px rgba(22, 224, 189, 0.4);
+  }
+  80% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(22, 224, 189, 0.6),
+      0 0 60px rgba(22, 224, 189, 0.4), 0 0 100px rgba(22, 224, 189, 0.2),
+      0 0 90px rgba(22, 224, 189, 0.1);
+  }
 }
 
 .section__subtitle {
