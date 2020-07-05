@@ -126,7 +126,7 @@ h3 {
   color: rgba(165, 253, 238, 0.8);
   font-family: "Concert One", "Arial Narrow", sans-serif;
   animation: neonspark 1s 3s forwards;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
 }
 
 .section__title--neontubing span {
