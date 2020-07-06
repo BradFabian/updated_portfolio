@@ -129,11 +129,11 @@ h3 {
 }
 
 .section__title--neontubing {
-  text-align: center;
   color: rgba(165, 253, 238, 0.8);
+
   font-family: "Concert One", "Arial Narrow", sans-serif;
   animation: neonspark 1s 1s forwards;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.1rem;
 }
 
 .section__title--neontubing span {
