@@ -10,3 +10,29 @@ navLinks.forEach((link) => {
     document.body.classList.remove("nav-open");
   });
 });
+
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    document.getElementById("neon").classList.add("section__title--neontubing");
+    localStorage.setItem("theme", "dark"); //add this
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    document
+      .getElementById("neon")
+      .classList.remove("section__title--neontubing");
+    localStorage.setItem("theme", "light"); //add this
+  }
+}
+
+const currentTheme = localStorage.getItem("theme")
+  ? localStorage.getItem("theme")
+  : null;
+
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  if (currentTheme === "dark") {
+    toggleSwitch.checked = true;
+  }
+}

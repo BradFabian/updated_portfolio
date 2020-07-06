@@ -15,7 +15,7 @@
 
   --clr-light: #ecf0f1;
   --clr-dark: #303030;
-  --clr-accent: #16b197;
+  --clr-accent: #16e0bd;
   /* #16e0bd */
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -24,6 +24,12 @@
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+/* Dark Theme */
+[data-theme="dark"] {
+  --clr-light: #303030;
+  --clr-dark: #ecf0f1;
+  --clr-accent: #16b197;
 }
 
 @media (min-width: 800px) {
@@ -43,8 +49,8 @@ html {
 }
 
 body {
-  background: var(--clr-dark);
-  color: var(--clr-light);
+  background: var(--clr-light);
+  color: var(--clr-dark);
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
@@ -645,4 +651,64 @@ header {
 
 @media print {
   /* remove any screen only styles, for example link underline */
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+}
+
+em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
