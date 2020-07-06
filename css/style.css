@@ -14,6 +14,7 @@
   --fw-bold: 400;
 
   --clr-light: #ecf0f1;
+  --clr-light-always: #ecf0f1;
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
   /* #16e0bd */
@@ -81,7 +82,7 @@ strong {
   display: inline-block;
   padding: 0.5em 2.5em;
   background: var(--clr-accent);
-  color: var(--clr-light);
+  color: var(--clr-light-always);
   text-decoration: none;
   cursor: pointer;
   font-size: 1rem;
@@ -131,7 +132,7 @@ h3 {
   text-align: center;
   color: rgba(165, 253, 238, 0.8);
   font-family: "Concert One", "Arial Narrow", sans-serif;
-  animation: neonspark 1s 3s forwards;
+  animation: neonspark 1s 1s forwards;
   letter-spacing: 0.5rem;
 }
 
@@ -407,6 +408,7 @@ header {
 .service {
   max-width: 500px;
   margin: 0 auto;
+  color: var(--clr-light-always);
 }
 
 @media (min-width: 800px) {
@@ -474,6 +476,10 @@ header {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.section__title--work {
+  color: var(--clr-accent);
 }
 
 .portfolio {
@@ -660,7 +666,7 @@ header {
   max-width: 300px;
 }
 
-em {
+.theme-switch-wrapper em {
   margin-left: 10px;
   font-size: 1rem;
 }
