@@ -490,10 +490,12 @@ header {
 .portfolio__item {
   background: var(--clr-accent);
   overflow: hidden;
+  margin: 0.3em;
 }
 
 .portfolio__img {
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+  object-fit: cover;
 }
 
 .portfolio__item:focus {
