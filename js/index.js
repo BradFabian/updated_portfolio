@@ -50,3 +50,8 @@ if (currentTheme) {
     toggleSwitch.checked = true;
   }
 }
+
+/*// Google Recaptcha //
+function onSubmit(token) {
+  document.getElementById("contact-form").submit();
+}*/

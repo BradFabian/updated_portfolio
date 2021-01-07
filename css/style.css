@@ -17,6 +17,7 @@
   --clr-light-always: #ecf0f1;
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
+  --form-bg: rgba(241, 106, 185, 0.767);
   /* #16e0bd */
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -43,6 +44,50 @@
 }
 
 /* General styles */
+
+input,
+textarea {
+  background-color: #ffffffe1;
+  width: 95%;
+  transition: all 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #ffffff;
+  width: 100%;
+}
+textarea {
+  font-size: 0.9rem;
+  border-radius: 15px;
+  border: 0;
+}
+
+textarea::placeholder {
+  color: grey;
+  font-family: var(--ff-primary);
+  font-size: 0.8em;
+  opacity: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+input {
+  font-size: 0.9rem;
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+  text-align: center;
+  border: 0;
+  margin-bottom: 1.2em;
+}
+
+input::placeholder {
+  color: grey;
+  font-family: var(--ff-primary);
+  font-size: 0.8em;
+  opacity: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
 /* endable this to add smooth scrolling */
 html {
@@ -167,7 +212,8 @@ h3 {
 }
 
 .section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--about,
+.section__subtitle--contact {
   background: var(--clr-accent);
   padding: 0.25em 1em;
   font-family: var(--ff-secondary);
@@ -424,17 +470,20 @@ header {
   }
 }
 
-.about-me {
+.about-me,
+.contact-me {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.about-me__img {
+.about-me__img,
+.contact-me__img {
   box-shadow: var(--bs);
 }
 
 @media (min-width: 600px) {
-  .about-me {
+  .about-me,
+  .contact-me {
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-template-areas:
@@ -444,11 +493,13 @@ header {
     grid-column-gap: 2em;
   }
 
-  .section__title--about {
+  .section__title--about,
+  .section__title--contact {
     grid-area: title;
   }
 
-  .section__subtitle--about {
+  .section__subtitle--about,
+  .section__subtitle--contact {
     grid-column: 1 / -1;
     grid-row: 2;
     position: relative;
@@ -458,7 +509,8 @@ header {
     padding-right: calc(200px + 4em);
   }
 
-  .about-me__img {
+  .about-me__img,
+  .contact-me__img {
     grid-area: img;
     position: relative;
     z-index: 2;
@@ -507,6 +559,47 @@ header {
 .portfolio__item:focus .portfolio__img {
   transform: scale(1.2);
   opacity: 0.5;
+}
+
+/*contact */
+.contact-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.form-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--form-bg);
+  border-radius: 20px;
+  box-shadow: var(--bs);
+  padding: 0.8em;
+}
+
+.msg-area {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  margin: 1em;
+}
+
+.msg-area > textarea {
+  flex: 1;
+  min-width: 12em;
+  padding: 1rem;
+}
+
+.details-area {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  margin: 1em;
+}
+
+.btn-container {
+  order: 3;
+  padding: 1em;
 }
 
 /* footer */
