@@ -1,0 +1,31 @@
+{
+  "name": "updated_portfolio",
+  "version": "1.0.0",
+  "description": "Tinkering with building a brand new portfolio with basic css and html https://bradfabian.github.io/updated_portfolio/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BradFabian/updated_portfolio.git"
+  },
+  "author": "Brad fabian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BradFabian/updated_portfolio/issues"
+  },
+  "homepage": "https://github.com/BradFabian/updated_portfolio#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "multiparty": "^4.2.2",
+    "nodemailer": "^6.4.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

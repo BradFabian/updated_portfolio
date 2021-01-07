@@ -64,11 +64,13 @@ const formEvent = form.addEventListener("submit", (event) => {
 
  
   sendMail(mail);
+
+  form.reset();
 })
 
 const sendMail = (mail) => {
   
-  fetch("https://bradfabian.com/send", {
+  fetch("http://bradfabian.com/", {
     method: "post", 
     body: mail, 
 
@@ -77,7 +79,7 @@ const sendMail = (mail) => {
   });
 };
 
-/*// Google Recaptcha //
+// Google Recaptcha //
 function onSubmit(token) {
   document.getElementById("contact-form").submit();
-}*/
+}
