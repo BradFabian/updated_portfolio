@@ -575,6 +575,7 @@ header {
   border-radius: 20px;
   box-shadow: var(--bs);
   padding: 0.8em;
+  margin: 1em;
 }
 
 .msg-area {

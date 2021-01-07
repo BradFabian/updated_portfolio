@@ -314,25 +314,23 @@
         Hanging on the telephone
       </p>
       <div class="contact-me__body">
-        <form action="POST" class="form-area" id="contact-form">
+        <form action="send" method=POST enctype = "multipart/form-data" class="form-area" id="contact-form">
           <div class="msg-area">
-            <!--<label for="msg">Message</label>-->
-            <!--cols="30" rows="10"-->
+            
             <textarea name="msg" id="msg" placeholder="Write message here..." ></textarea>
           </div>
           <div class="details-area">
-            <!--<label for="firstname">First Name</label>-->
+            
             <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
 
-            <!--<label for="lastname">Last Name</label>-->
             <input type="text" name="lastname" id="lastname" placeholder="Last Name">
 
-            <!--<label for="email">Email</label>-->
+            
             <input type="email" name="email" id="email"  placeholder="Email" required>
             
           </div>
           <div class="btn-container">
-            <button type="submit" class="btn g-recaptcha" 
+            <button type="submit" value="submit" class="btn g-recaptcha" 
             data-sitekey="6LeGziMaAAAAAO6PQQ_n1iC8o2oOUsnme5JMS7JG" 
             data-callback='onSubmit' 
             data-action='submit'>Submit</button>
