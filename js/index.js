@@ -70,7 +70,7 @@ const formEvent = form.addEventListener("submit", (event) => {
 
 const sendMail = (mail) => {
   
-  fetch("http://bradfabian.com/", {
+  fetch("https://bradfabian.com/", {
     method: "post", 
     body: mail, 
 
