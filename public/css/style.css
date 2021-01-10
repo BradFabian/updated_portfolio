@@ -23,7 +23,8 @@
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-
+  --form-inset: inset 0 0.12em 0.05em rgba(241, 106, 185, 0.767),
+    inset 0 0.2em 0.25em;
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
@@ -50,6 +51,7 @@ textarea {
   background-color: #ffffffe1;
   width: 95%;
   transition: all 0.2s;
+  box-shadow: var(--form-inset);
 }
 
 input:focus,
@@ -73,7 +75,7 @@ textarea::placeholder {
 }
 input {
   font-size: 0.9rem;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 0.5em 1.5em;
   text-align: center;
   border: 0;
@@ -603,6 +605,12 @@ header {
   padding: 1em;
 }
 
+#ajax-response {
+  font-family: var(--ff-secondary);
+  color: var(--form-bg);
+  text-shadow: var(--clr-accent) 1px 0 10px;
+}
+
 /* footer */
 
 .footer {
@@ -610,7 +618,11 @@ header {
   color: var(--clr-accent);
   text-align: center;
   padding: 2.5em 0;
-  font-size: var(--fs-h3);
+  font-size: var(--fs-body);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap-reverse;
 }
 
 .footer a {

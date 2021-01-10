@@ -64,6 +64,9 @@
           <li class="nav__item">
             <a href="#work" class="nav__link">My Work</a>
           </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact Me</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -313,30 +316,29 @@
       <p class="section__subtitle section__subtitle--contact">
         Hanging on the telephone
       </p>
+      <!-- id="contact-form"-->
       <div class="contact-me__body">
-        <form  action='send' method='POST' enctype = "multipart/form-data" class="form-area" id="contact-form">
+        <form  action='https://5td3tj9fhk.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer' method='POST' class="form-area" id="contact-form">
           <div class="msg-area">
             
-            <textarea name="msg" id="msg" placeholder="Write message here..." ></textarea>
+            <textarea name="msg" id="msg" placeholder="Write message here..." required></textarea>
           </div>
           <div class="details-area">
             
             <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
 
-            <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+            <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
 
             
             <input type="email" name="email" id="email"  placeholder="Email" required>
             
           </div>
           <div class="btn-container">
-            <button type="submit" value="submit" class="btn g-recaptcha" 
-            data-sitekey="6LeGziMaAAAAAO6PQQ_n1iC8o2oOUsnme5JMS7JG" 
-            data-callback='onSubmit' 
-            data-action='submit'>Submit</button>
+            <button type="submit" name="submit" class="btn" 
+           >Submit</button>
             </div>
         </form>
-        
+        <p id="ajax-response"></p>
       </div>
 
       <img src="img/mailbox.jpg" alt="mailbox" class="contact-me__img" />
@@ -346,12 +348,17 @@
     <!-- Footer -->
     <footer class="footer">
       <!-- replace with your own email address -->
-      <a href="mailto:brad@bradfabian.com" class="footer__link"
-        >brad@bradfabian.com</a
-      >
+      <p>Hand coded by Brad Fabian</p>
+      
+      <p>No Frameworks were hurt in the making of this site</p>
+
+      <span> 
+        <a href="mailto:brad@bradfabian.com" class="footer__link"
+          >Email Me</a> 
+        </span>
     </footer>
 
     <script src="js/index.js"></script>
-    <!--<script src="https://www.google.com/recaptcha/api.js"></script>-->
+    
   </body>
 </html>
