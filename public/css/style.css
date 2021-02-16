@@ -223,9 +223,17 @@ h3 {
 }
 
 .section__subtitle--work {
-  color: var(--clr-accent);
-  font-weight: var(--fw-bold);
-  margin-bottom: 2em;
+  color: var(--clr-dark);
+  text-align: center;
+  /*font-weight: var(--fw-bold);*/
+  width: 60%;
+  margin: 1em auto;
+
+  text-shadow: 0.5px 0.5px var(--clr-light);
+  background-color: var(--clr-accent);
+  box-shadow: 0 0 30px rgba(241, 106, 185, 0.6);
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 /* header */
